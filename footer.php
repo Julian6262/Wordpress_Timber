@@ -2,7 +2,7 @@
 
     <div class="container">
 
-        <a class="footer__phone" href="tel:+75852772217">+7 (585) 277-22-17</a>
+        <a class="footer__phone" href="tel:+75852772217"><?php the_field('header__phone'); ?></a>
 
         <div class="footer__email">
             namename@gmail.com
@@ -11,6 +11,8 @@
     </div>
 
 </footer>
+
+<?php wp_footer(); ?>
 
 </body>
 
