@@ -12,7 +12,7 @@
             <?php the_field('main__text'); ?>
         </div>
 
-        <img class="main__img" src="<?php bloginfo( 'template_url' ); ?>/assets/img/main-img.png" alt="...">
+        <img class="main__img" src="<?php bloginfo('template_url'); ?>/assets/img/main-img.png" alt="...">
 
         <section class="project">
 
@@ -23,39 +23,41 @@
             <div class="project__item">
 
                 <?php
-                    $featured_posts = get_field('project__item');
-                        if( $featured_posts ): ?>
+                $featured_posts = get_field('project__item');
+                if ($featured_posts): ?>
 
-                                <?php foreach( $featured_posts as $post ):
+                    <?php foreach ($featured_posts as $post):
 
-                                setup_postdata($post); ?>
+                        setup_postdata($post); ?>
 
-                                    <div class="project__name">
-                                           <?php the_field('project__name'); ?>
-                                    </div>
+                        <div class="project__name">
+                            <?php the_field('project__name'); ?>
+                        </div>
 
-                                    <div class="project__size">
-                                        <?php the_field('project__size'); ?>
-                                    </div>
+                        <div class="project__size">
+                            <?php the_field('project__size'); ?>
+                        </div>
 
-                                    <div class="project__area">
-                                        <?php the_field('project__area'); ?>
-                                    </div>
+                        <div class="project__area">
+                            <?php the_field('project__area'); ?>
+                        </div>
 
-                                    <div class="project__price">
-                                        <?php the_field('project__price'); ?>
-                                    </div>
+                        <div class="project__price">
+                            <?php the_field('project__price'); ?>
+                        </div>
 
-                                    <div class="project__images">
-                                        <img class="project__images-item" src="<?php the_field('project__images-item1'); ?>" alt="...">
-                                        <img class="project__images-item" src="<?php the_field('project__images-item2'); ?>" alt="...">
-                                    </div>
+                        <div class="project__images">
+                            <img class="project__images-item" src="<?php the_field('project__images-item1'); ?>"
+                                 alt="...">
+                            <img class="project__images-item" src="<?php the_field('project__images-item2'); ?>"
+                                 alt="...">
+                        </div>
 
-                                <?php endforeach; ?>
+                    <?php endforeach; ?>
 
-                <?php
-                                   // Reset the global post object so that the rest of the page works correctly.
-                wp_reset_postdata(); ?>
+                    <?php
+                    // Reset the global post object so that the rest of the page works correctly.
+                    wp_reset_postdata(); ?>
                 <?php endif; ?>
 
             </div>
@@ -66,7 +68,7 @@
 
     <section class="download">
 
-        <img class="download__img" src="<?php bloginfo( 'template_url' ); ?>/assets/img/img-download.png" alt="...">
+        <img class="download__img" src="<?php bloginfo('template_url'); ?>/assets/img/img-download.png" alt="...">
 
         <a href="<?php the_field('download__img'); ?>" download>СКАЧАТЬ ВЕСЬ КАТАЛОГ ДОМОВ</a>
 
@@ -91,7 +93,7 @@
         </div>
     </section>
 
-    <img class="main__img" src="<?php bloginfo( 'template_url' ); ?>/assets/img/main-img.png" alt="...">
+    <img class="main__img" src="<?php bloginfo('template_url'); ?>/assets/img/main-img.png" alt="...">
 
 </main>
 
